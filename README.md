@@ -25,7 +25,7 @@
     
 ## 객체 모델링
 
-### domain.Point
+### Point
 
 - 좌표 값을 담은 객체
 - (위도, 경도)
@@ -33,18 +33,21 @@
     - [x] 위도가 소수점 7자리가 아니면 예외가 발생한다.
     - [x] 경도가 소수점 6자리가 아니면 예외가 발생한다.
 
-### domain.Post
+### Post
 
 - (__point__, address, __[postImage]__, content, city, createDate) 
 - [x] 게시글 생성 및 toString 테스트
 - [x] 게시글을 생성할 때 여러 개의 사진을 달 수 있다.
 
-### domain.PostImage
+### PostImage
 
 - (url)
 - [x] 사진 생성 테스트
 
-### domain.Posts
+### Posts
 
-- (__[domain.Post]__)
+- (__[Post]__)
 ~~- [x] 저장된 글의 정보를 전체 조회할 때, 각각 글의 위도, 경도, 이미지url 정보가 조회된다.~~
+- [ ] 글 정보 조회 시 여러 개의 사진 url 중 랜덤으로 하나의 url이 출력된다.
+
+

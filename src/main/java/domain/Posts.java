@@ -9,5 +9,4 @@ public class Posts {
         this.posts = posts;
     }
 
-
 }

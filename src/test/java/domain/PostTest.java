@@ -30,9 +30,7 @@ class PostTest {
                 CITY,
                 CREATE_DATE);
 
-
         assertThat(post.toString()).contains(String.valueOf(LAT), String.valueOf(LNG), ADDRESS, CONTENT, CITY, CREATE_DATE.toString());
-
     }
 
     @Test
@@ -44,9 +42,8 @@ class PostTest {
         PostImage postImage1 = new PostImage(POST_IMAGE_URL + 2);
 
         List<PostImage> postImages = Arrays.asList(postImage, postImage1);
-        List<PostImage> saveImages = post.saveImages(postImages);
+        List<PostImage> saveImages = post.saveImages(postImages).getPostImages();
 
         assertEquals(postImages, saveImages);
     }
-
 }
