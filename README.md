@@ -88,7 +88,7 @@
 - (__coordinate__, address, __[postImage]__, content, createDate)
 - [x] 특정 위치를 선택해 게시글을 생성
 - [x] 한 게시글에 여러 개의 사진을 달 수 있다.
-
+- [x] 한 게시글에 색상을 하나 지정할 수 있다.
 
 ### _Coordinate_
 ~~저번에 LatLng도 있었는데 Coordinate가 더 소리내어 읽기 쉬워서 일단 채택~~ 
@@ -107,8 +107,9 @@
 
 ### domain.Color
 
-- _RED, ORANGE, YELLOW, GREEN, BLUE_~~기획과 논의 필요~~
+- _RED, ORANGE, YELLOW, GREEN, BLUE, BLACK_~~기획과 논의 필요~~
 - _(emotion)_~~감정은 현재 객체로 나오기엔 하는게 아무것도 없어서 일단 뺐습니다.~~
+- Post가 생성되면 BLACK 을 기본값으로 가진다. 
 
 ## 지침서, 영상
 

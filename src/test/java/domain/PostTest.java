@@ -38,7 +38,6 @@ class PostTest {
     @Test
     @DisplayName("한 게시글에 여러 개의 사진을 달 수 있다.")
     void saveImageInPostTest() {
-        Post post = Post.init(coordinate, address);
         String url = "url-example";
         String url2 = "url-example2";
         PostImage postImage = new PostImage(url);
@@ -46,8 +45,16 @@ class PostTest {
         post.saveImages(postImage, postImage2);
 
         PostImages expectPostImages = new PostImages(List.of(postImage, postImage2));
-        assertThat(post.postImages).isEqualTo(expectPostImages);
+        assertThat(post.getPostImages()).isEqualTo(expectPostImages);
     }
 
+
+    @Test
+    @DisplayName("한 게시글에 색상을 하나 지정할 수 있다.")
+    void setColorTest() {
+        post.changeColor(Color.BLUE);
+
+        assertThat(post.getColor()).isEqualTo(Color.BLUE);
+    }
 
 }
