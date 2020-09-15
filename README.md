@@ -87,6 +87,8 @@
 - 게시글
 - (__coordinate__, address, __[postImage]__, content, createDate)
 - [x] 특정 위치를 선택해 게시글을 생성
+- [x] 한 게시글에 여러 개의 사진을 달 수 있다.
+
 
 ### _Coordinate_
 ~~저번에 LatLng도 있었는데 Coordinate가 더 소리내어 읽기 쉬워서 일단 채택~~ 

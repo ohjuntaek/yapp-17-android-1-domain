@@ -1,24 +1,29 @@
 package domain;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Post {
     private final Coordinate coordinate;
     private final Address address;
-    private final PostImages postImages;
-    private final String content;
     private final LocalDate createDate;
 
-    public Post(Coordinate coordinate, Address address, PostImages postImages, String content, LocalDate createDate) {
+    protected String content;
+    protected PostImages postImages;
+
+    public Post(Coordinate coordinate, Address address, LocalDate createDate) {
         this.coordinate = coordinate;
         this.address = address;
-        this.postImages = postImages;
-        this.content = content;
         this.createDate = createDate;
     }
 
     public static Post init(Coordinate coordinate, Address address) {
-        return new Post(coordinate, address, null, null, LocalDate.now());
+        return new Post(coordinate, address, LocalDate.now());
+    }
+
+    public void saveImages(PostImage... postImages) {
+        this.postImages = new PostImages(new ArrayList<>(Arrays.asList(postImages)));
     }
 
     @Override public String toString() {
